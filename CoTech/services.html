@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Confeanza Tech</title>
+<meta name="description" content="End-to-end software services for enterprise: ERP, AI, CRM, cloud, mobile, and API integrations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.svc-full-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.svc-full-card{border:1px solid var(--border);border-radius:16px;padding:36px;background:var(--bg);transition:box-shadow .2s,border-color .2s}
+.svc-full-card:hover{box-shadow:var(--shadow-h);border-color:var(--border-h)}
+.svc-full-card .icon{width:48px;height:48px;border-radius:12px;background:var(--accent-bg);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.svc-full-card .icon svg{width:24px;height:24px;stroke:var(--accent);stroke-width:1.5;fill:none}
+.svc-full-card h3{font-size:19px;font-weight:700;margin-bottom:10px}
+.svc-full-card p{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:18px}
+.svc-bullets{list-style:none;display:flex;flex-direction:column;gap:6px}
+.svc-bullets li{font-size:13px;color:var(--text2);display:flex;align-items:center;gap:8px}
+.svc-bullets li::before{content:'';display:block;width:14px;height:14px;flex-shrink:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M2.5 7L5.5 10L11.5 4' stroke='%234f46e5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat}
+/* Process grid */
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.proc-card{background:var(--bg1);padding:32px 28px;transition:background .2s}
+.proc-card:hover{background:var(--bg)}
+.proc-num{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.proc-card h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.proc-card p{font-size:13px;color:var(--text2);line-height:1.65}
+@media(max-width:760px){
+  .svc-full-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .process-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="companylogo.png" alt="Confeanza Tech" class="nav-logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="industries.html">Industries</a>
+      <a href="contact.html">Contact</a>
+      <a href="openpositions.html">Open Positions</a>
+    </div>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Get Started</a>
+    </div>
+    <button class="nav-hamburger" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="services.html" class="active">Services</a>
+  <a href="products.html">Products</a>
+  <a href="about.html">About</a>
+  <a href="industries.html">Industries</a>
+  <a href="contact.html">Contact</a>
+  <a href="openpositions.html">Open Positions</a>
+  <div class="nav-drawer-cta"><a href="contact.html" class="btn btn-primary">Get Started</a></div>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-breadcrumb"><a href="index.html">Home</a><span>/</span><span>Services</span></div>
+    <h1>Services That <span style="color:var(--accent)">Move the Needle</span></h1>
+    <p>End-to-end software services designed for complex, mission-critical enterprise environments — from architecture to deployment and beyond.</p>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section>
+  <div class="section-inner">
+    <div class="svc-full-grid">
+      <div class="svc-full-card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="8" height="8" rx="2"/><rect x="14" y="2" width="8" height="8" rx="2"/><rect x="2" y="14" width="8" height="8" rx="2"/><rect x="14" y="14" width="8" height="8" rx="2"/></svg></div>
+        <h3>Enterprise ERP</h3>
+        <p>Fully integrated ERP platforms covering finance, HR, operations, procurement, and reporting — purpose-built for institutions and large enterprises that need everything to work together.</p>
+        <ul class="svc-bullets">
+          <li>Finance, GL, AR/AP, and budgeting</li>
+          <li>HRMS, payroll, and attendance</li>
+          <li>Procurement and inventory</li>
+          <li>Multi-branch and multi-currency support</li>
+          <li>Real-time reporting and dashboards</li>
+        </ul>
+      </div>
+      <div class="svc-full-card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M16.9 16.9l2.1 2.1M4.9 19.1l2.1-2.1M16.9 7.1l2.1-2.1"/></svg></div>
+        <h3>AI &amp; Analytics</h3>
+        <p>We embed intelligence directly into your workflows — not bolted on after the fact. From NLP query interfaces to predictive modelling, every insight is actionable.</p>
+        <ul class="svc-bullets">
+          <li>Unified data warehouse and ETL pipelines</li>
+          <li>Predictive forecasting and anomaly detection</li>
+          <li>NLP-driven reporting and query</li>
+          <li>Custom KPI dashboards per department</li>
+          <li>Automated report distribution</li>
+        </ul>
+      </div>
+      <div class="svc-full-card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3>Custom CRM</h3>
+        <p>CRM systems built for your sales motion — not adapted from a generic template. Full pipeline management, automation, and integration with every communication channel.</p>
+        <ul class="svc-bullets">
+          <li>Multi-pipeline sales management</li>
+          <li>Lead scoring and automated routing</li>
+          <li>Email, SMS, and WhatsApp integration</li>
+          <li>Customer success and renewal workflows</li>
+          <li>Deep analytics and conversion reporting</li>
+        </ul>
+      </div>
+      <div class="svc-full-card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M18 10h-1.3A5 5 0 006.7 10H5a3 3 0 000 6h13a3 3 0 000-6z"/></svg></div>
+        <h3>Cloud Infrastructure</h3>
+        <p>We design and manage cloud infrastructure that is secure, cost-efficient, and built for scale — on AWS, Azure, GCP, or a hybrid setup that fits your constraints.</p>
+        <ul class="svc-bullets">
+          <li>Cloud architecture design and migration</li>
+          <li>Kubernetes orchestration and auto-scaling</li>
+          <li>CI/CD pipeline setup and management</li>
+          <li>Security hardening and compliance</li>
+          <li>24/7 infrastructure monitoring</li>
+        </ul>
+      </div>
+      <div class="svc-full-card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M9 11h4"/></svg></div>
+        <h3>Mobile Applications</h3>
+        <p>Cross-platform mobile apps for iOS and Android using React Native and Flutter — delivering enterprise-grade functionality with a consumer-grade user experience.</p>
+        <ul class="svc-bullets">
+          <li>iOS and Android from a single codebase</li>
+          <li>Offline-first capability</li>
+          <li>Push notifications and real-time sync</li>
+          <li>Biometric authentication</li>
+          <li>App Store and Play Store deployment</li>
+        </ul>
+      </div>
+      <div class="svc-full-card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L4 7v5c0 5.25 3.75 10.15 8 11.35C16.25 22.15 20 17.25 20 12V7L12 3z"/></svg></div>
+        <h3>API &amp; Integrations</h3>
+        <p>We build the connective tissue of your software ecosystem — RESTful and GraphQL APIs, webhook infrastructure, and third-party integration libraries that just work.</p>
+        <ul class="svc-bullets">
+          <li>RESTful and GraphQL API design</li>
+          <li>Webhook infrastructure and event systems</li>
+          <li>ERP, payment, and CRM connectors</li>
+          <li>Single sign-on (SAML, OAuth 2.0)</li>
+          <li>API documentation and developer portals</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="alt-bg">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="label">How We Work</div>
+      <h2 class="section-title">A process built for <span class="muted">certainty</span></h2>
+      <p class="section-sub">Six deliberate phases that take your idea from concept to production — with zero surprises.</p>
+    </div>
+    <div class="process-grid reveal">
+      <div class="proc-card">
+        <div class="proc-num">01 — Discovery</div>
+        <h3>Requirements &amp; Architecture</h3>
+        <p>We deeply understand your business, workflows, and goals. This phase defines scope, architecture, and a precise delivery plan.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">02 — Design</div>
+        <h3>UX Research &amp; System Design</h3>
+        <p>Interface design rooted in real user research, paired with technical specifications, API contracts, and data models.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">03 — Development</div>
+        <h3>Agile Engineering Sprints</h3>
+        <p>Two-week sprints with continuous delivery, daily builds, and full transparency through your project portal.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">04 — Quality</div>
+        <h3>Automated &amp; Manual Testing</h3>
+        <p>Unit, integration, E2E, performance, and security testing before any code ships to production.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">05 — Deployment</div>
+        <h3>CI/CD &amp; Infrastructure</h3>
+        <p>Zero-downtime deployments with monitoring, alerting, rollback procedures, and documented runbooks.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">06 — Support</div>
+        <h3>Ongoing Partnership</h3>
+        <p>24/7 support, proactive performance monitoring, quarterly roadmap reviews, and SLA-backed maintenance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2>Ready to get started?</h2>
+  <p>Tell us about your project and we will find the right solution for you.</p>
+  <div class="cta-actions">
+    <a href="contact.html" class="btn btn-white btn-lg">Talk to Our Team</a>
+    <a href="products.html" class="btn btn-outline-white btn-lg">See Our Products</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="companylogo.png" alt="Confeanza Tech" class="nav-logo-img">
+        </a>
+        <p>Enterprise software for organizations that cannot afford to fail.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">UniERP</a></li>
+          <li><a href="products.html">MediCore</a></li>
+          <li><a href="products.html">PulseAnalytics</a></li>
+          <li><a href="products.html">FlowCRM</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html">Leadership</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="openpositions.html">Open Positions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="contact.html">Documentation</a></li>
+          <li><a href="contact.html">Case Studies</a></li>
+          <li><a href="contact.html">Support</a></li>
+          <li><a href="contact.html">Status</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&#169; 2026 Confeanza Tech. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+var obs=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+var navT=document.getElementById('navToggle'),navD=document.getElementById('navDrawer');
+if(navT&&navD){navT.addEventListener('click',function(){navT.classList.toggle('open');navD.classList.toggle('open');});navD.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navT.classList.remove('open');navD.classList.remove('open');});});}
+</script>
+<script src="chatbot.js"></script>
+</body>
+</html>
+

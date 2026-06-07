@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industries — Confeanza Tech</title>
+<meta name="description" content="Confeanza Tech serves 8 major industries including education, healthcare, government, logistics, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.ind-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.ind-card{border:1px solid var(--border);border-radius:16px;background:var(--bg);transition:box-shadow .2s,border-color .2s;overflow:hidden;display:flex;flex-direction:column}
+.ind-card:hover{box-shadow:var(--shadow-h);border-color:var(--border-h)}
+.ind-card-visual{height:220px;overflow:hidden;flex-shrink:0}
+.ind-card-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.ind-card:hover .ind-card-visual img{transform:scale(1.05)}
+.ind-visual-gradient{height:220px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ind-visual-gradient svg{width:58px;height:58px;stroke:#fff;stroke-width:1.2;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:0.85}
+.ind-card-body{padding:28px;display:flex;flex-direction:column;flex:1}
+.ind-icon-box{width:44px;height:44px;border-radius:10px;background:var(--accent-bg);border:1px solid rgba(79,70,229,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.ind-icon-box svg{width:22px;height:22px;stroke:var(--accent);stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ind-card h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.ind-card p{font-size:14px;color:var(--text2);line-height:1.65;flex:1}
+.ind-card-full{border:1px solid var(--border);border-radius:16px;padding:36px;background:var(--bg);margin-top:0}
+.ind-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.ind-tag{font-size:12px;color:var(--accent);background:var(--accent-bg);padding:4px 10px;border-radius:100px;font-weight:600}
+/* Process */
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.proc-card{background:var(--bg1);padding:32px 28px;transition:background .2s}
+.proc-card:hover{background:var(--bg)}
+.proc-num{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.proc-card h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.proc-card p{font-size:13px;color:var(--text2);line-height:1.65}
+@media(max-width:760px){
+  .ind-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .process-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="companylogo.png" alt="Confeanza Tech" class="nav-logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="industries.html" class="active">Industries</a>
+      <a href="contact.html">Contact</a>
+      <a href="openpositions.html">Open Positions</a>
+    </div>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Get Started</a>
+    </div>
+    <button class="nav-hamburger" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="products.html">Products</a>
+  <a href="about.html">About</a>
+  <a href="industries.html" class="active">Industries</a>
+  <a href="contact.html">Contact</a>
+  <a href="openpositions.html">Open Positions</a>
+  <div class="nav-drawer-cta"><a href="contact.html" class="btn btn-primary">Get Started</a></div>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-breadcrumb"><a href="index.html">Home</a><span>/</span><span>Industries</span></div>
+    <h1>Sector Expertise <span style="color:var(--accent)">Across Domains</span></h1>
+    <p>We have shipped production systems across eight major industries, each with distinct compliance requirements, data models, and scalability demands.</p>
+  </div>
+</div>
+
+<!-- INDUSTRIES -->
+<section>
+  <div class="section-inner">
+    <div class="ind-grid">
+
+      <div class="ind-card reveal">
+        <div class="ind-card-visual"><img src="higherEducation.png" alt="Higher Education"></div>
+        <div class="ind-card-body">
+          <div class="ind-icon-box"><svg viewBox="0 0 24 24"><path d="M12 3L4 9v12h16V9L12 3z"/><rect x="9" y="14" width="6" height="7" rx="1"/></svg></div>
+          <h3>Higher Education</h3>
+          <p>Universities, colleges, polytechnics, and school systems. We understand accreditation frameworks, semester-based operations, and the unique complexity of academic data management.</p>
+          <div class="ind-tags"><span class="ind-tag">Universities</span><span class="ind-tag">Colleges</span><span class="ind-tag">Polytechnics</span><span class="ind-tag">K-12 Schools</span></div>
+        </div>
+      </div>
+
+      <div class="ind-card reveal">
+        <div class="ind-card-visual"><img src="healtcare.png" alt="Healthcare"></div>
+        <div class="ind-card-body">
+          <div class="ind-icon-box"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h3>Healthcare</h3>
+          <p>Hospitals, multi-speciality clinics, diagnostic lab chains, and pharmacy networks. Full NABH, JCI, and HIPAA awareness baked into every system we build.</p>
+          <div class="ind-tags"><span class="ind-tag">Hospitals</span><span class="ind-tag">Clinics</span><span class="ind-tag">Diagnostics</span><span class="ind-tag">Pharmacy</span></div>
+        </div>
+      </div>
+
+      <div class="ind-card reveal">
+        <div class="ind-card-visual"><img src="corporate.png" alt="Corporate Enterprise"></div>
+        <div class="ind-card-body">
+          <div class="ind-icon-box"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
+          <h3>Corporate Enterprise</h3>
+          <p>Manufacturing groups, conglomerates, shared-services organizations, and professional services firms that need systems to span departments, geographies, and entities.</p>
+          <div class="ind-tags"><span class="ind-tag">Manufacturing</span><span class="ind-tag">Conglomerates</span><span class="ind-tag">Professional Services</span></div>
+        </div>
+      </div>
+
+      <div class="ind-card reveal">
+        <div class="ind-card-visual"><img src="goverment_public.png" alt="Government &amp; Public Sector"></div>
+        <div class="ind-card-body">
+          <div class="ind-icon-box"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div>
+          <h3>Government &amp; Public Sector</h3>
+          <p>Municipal bodies, ministries, statutory agencies, and public utilities. We build for auditability, transparency, and the unique procurement and governance requirements of public institutions.</p>
+          <div class="ind-tags"><span class="ind-tag">Ministries</span><span class="ind-tag">Municipalities</span><span class="ind-tag">Agencies</span><span class="ind-tag">Utilities</span></div>
+        </div>
+      </div>
+
+      <div class="ind-card reveal">
+        <div class="ind-card-visual"><img src="Retail & E-Commerce.png" alt="Retail &amp; E-Commerce"></div>
+        <div class="ind-card-body">
+          <div class="ind-icon-box"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+          <h3>Retail &amp; E-Commerce</h3>
+          <p>Omnichannel retail chains, marketplace operators, and D2C brands. Inventory intelligence, order management, loyalty systems, and supplier portals in one integrated platform.</p>
+          <div class="ind-tags"><span class="ind-tag">Omnichannel Retail</span><span class="ind-tag">Marketplaces</span><span class="ind-tag">D2C</span></div>
+        </div>
+      </div>
+
+      <div class="ind-card reveal">
+        <div class="ind-card-visual"><img src="Financial Services.png" alt="Financial Services"></div>
+        <div class="ind-card-body">
+          <div class="ind-icon-box"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+          <h3>Financial Services</h3>
+          <p>Banks, NBFCs, insurance companies, microfinance institutions, and fintech platforms. Compliance-first engineering with full audit trails, regulatory reporting, and multi-entity support.</p>
+          <div class="ind-tags"><span class="ind-tag">Banking</span><span class="ind-tag">Insurance</span><span class="ind-tag">NBFC</span><span class="ind-tag">Fintech</span></div>
+        </div>
+      </div>
+
+      <div class="ind-card reveal">
+        <div class="ind-card-visual"><img src="Real Estate & Construction.png" alt="Real Estate &amp; Construction"></div>
+        <div class="ind-card-body">
+          <div class="ind-icon-box"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+          <h3>Real Estate &amp; Construction</h3>
+          <p>Property developers, construction groups, PropTech platforms, and facility management companies. Project tracking, unit management, buyer CRM, and RERA compliance modules.</p>
+          <div class="ind-tags"><span class="ind-tag">Developers</span><span class="ind-tag">Construction</span><span class="ind-tag">PropTech</span><span class="ind-tag">Facility Mgmt</span></div>
+        </div>
+      </div>
+
+      <div class="ind-card reveal">
+        <div class="ind-card-visual"><img src="Logistics & Supply Chain.png" alt="Logistics &amp; Supply Chain"></div>
+        <div class="ind-card-body">
+          <div class="ind-icon-box"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+          <h3>Logistics &amp; Supply Chain</h3>
+          <p>Third-party logistics providers, freight forwarders, cold chain operators, and warehouse networks. Full track-and-trace, dispatch management, and carrier integration.</p>
+          <div class="ind-tags"><span class="ind-tag">3PL Providers</span><span class="ind-tag">Freight</span><span class="ind-tag">Warehouse</span><span class="ind-tag">Cold Chain</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="alt-bg">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="label">Our Approach</div>
+      <h2 class="section-title">How we deliver <span class="muted">across every industry</span></h2>
+      <p class="section-sub">A repeatable, proven delivery process — adapted to the specific compliance and domain requirements of each sector.</p>
+    </div>
+    <div class="process-grid reveal">
+      <div class="proc-card">
+        <div class="proc-num">01 — Discovery</div>
+        <h3>Domain Deep-Dive</h3>
+        <p>We start by embedding with your team — understanding your workflows, regulatory environment, and the problems that existing software hasn't solved.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">02 — Design</div>
+        <h3>Domain-Aware Architecture</h3>
+        <p>System design that accounts for your industry's specific data models, compliance requirements, and integration landscape from the ground up.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">03 — Build</div>
+        <h3>Agile Engineering</h3>
+        <p>Two-week sprints with working software at the end of every cycle — no big-bang deliveries, no surprises at launch.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">04 — Validate</div>
+        <h3>Compliance Testing</h3>
+        <p>Functional, performance, and regulatory validation — so you can deploy with confidence and pass any audit from day one.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">05 — Launch</div>
+        <h3>Change Management</h3>
+        <p>We manage the transition — user training, data migration, go-live support, and hypercare coverage to make the cutover seamless.</p>
+      </div>
+      <div class="proc-card">
+        <div class="proc-num">06 — Evolve</div>
+        <h3>Long-Term Partnership</h3>
+        <p>Post-launch, we stay engaged — quarterly reviews, proactive monitoring, and a roadmap that evolves with your business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2>Your industry. Our expertise.</h2>
+  <p>Tell us about your sector and the problem you are trying to solve.</p>
+  <div class="cta-actions">
+    <a href="contact.html" class="btn btn-white btn-lg">Talk to a Specialist</a>
+    <a href="products.html" class="btn btn-outline-white btn-lg">View Products</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="companylogo.png" alt="Confeanza Tech" class="nav-logo-img">
+        </a>
+        <p>Enterprise software for organizations that cannot afford to fail.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">UniERP</a></li>
+          <li><a href="products.html">MediCore</a></li>
+          <li><a href="products.html">PulseAnalytics</a></li>
+          <li><a href="products.html">FlowCRM</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html">Leadership</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="openpositions.html">Open Positions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="contact.html">Documentation</a></li>
+          <li><a href="contact.html">Case Studies</a></li>
+          <li><a href="contact.html">Support</a></li>
+          <li><a href="contact.html">Status</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&#169; 2026 Confeanza Tech. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+var obs=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+var navT=document.getElementById('navToggle'),navD=document.getElementById('navDrawer');
+if(navT&&navD){navT.addEventListener('click',function(){navT.classList.toggle('open');navD.classList.toggle('open');});navD.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navT.classList.remove('open');navD.classList.remove('open');});});}
+</script>
+<script src="chatbot.js"></script>
+</body>
+</html>
+
