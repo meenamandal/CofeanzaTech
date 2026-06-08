@@ -183,10 +183,6 @@ btn.addEventListener('click',function(){
 document.getElementById('ct-send').addEventListener('click',function(){send();});
 inp.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send();}});
 
-document.querySelectorAll('.ctq').forEach(function(q){
-  q.addEventListener('click',function(){send(q.textContent);});
-});
-
 /* Quick reply keyword map */
 var qMap={
   'Our Services':'services',
@@ -197,7 +193,7 @@ var qMap={
 };
 document.querySelectorAll('.ctq').forEach(function(q){
   q.addEventListener('click',function(){
-    var key=qMap[q.textContent]||q.textContent;
+    var key=qMap[q.textContent.trim()]||q.textContent.trim();
     send(key);
   });
 });
