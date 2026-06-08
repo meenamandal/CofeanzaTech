@@ -46,6 +46,17 @@
   .hero-banner-slide{width:320px;height:200px}
   .hero-banner-track{gap:12px}
 }
+@media(max-width:480px){
+  .hero-content{padding:36px 16px 24px}
+  .hero h1{font-size:clamp(28px,9vw,38px)}
+  .hero-sub{font-size:14px;margin-bottom:24px}
+  .hero-actions{gap:10px}
+  .hero-actions .btn-lg{padding:11px 20px;font-size:14px}
+  .hero-banner-slide{width:240px;height:148px}
+  .hero-banner-track{gap:10px}
+  .hero-stat .n{font-size:18px}
+  .hero-stat .l{font-size:10px}
+}
 /* Section teaser grid */
 .svc-teaser-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--border)}
 .svc-teaser-card{background:var(--bg);padding:28px 26px;transition:background .18s}
@@ -85,7 +96,12 @@
 }
 @media(max-width:640px){
   .svc-teaser-grid,.why-strip{grid-template-columns:1fr}
-  .hero h1{font-size:38px}
+}
+@media(max-width:480px){
+  .svc-teaser-card{padding:20px 18px}
+  .prod-teaser-card{padding:22px}
+  .why-strip-item{padding:20px 16px}
+  .why-strip-num{font-size:24px}
 }
 </style>
 </head>

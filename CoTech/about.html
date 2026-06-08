@@ -48,11 +48,19 @@
 .stars svg{width:13px;height:13px;fill:#f59e0b}
 @media(max-width:860px){
   .about-split,.team-grid{grid-template-columns:1fr}
+  .about-split{gap:36px}
   .why-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:560px){
   .why-grid,.grid-3{grid-template-columns:1fr}
   .team-card{flex-direction:column}
+}
+@media(max-width:480px){
+  .team-card{padding:22px 18px;gap:16px}
+  .team-avatar{width:52px;height:52px;font-size:17px}
+  .value-card{padding:20px 18px}
+  .why-card{padding:20px 18px}
+  .why-num{font-size:26px}
 }
 </style>
 </head>
