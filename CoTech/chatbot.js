@@ -18,7 +18,7 @@ var kb = [
   { keys:['price','pricing','cost','how much','fee','quote','budget','charge','rate'],
     answer:'Our pricing is customized based on:\n\n• Modules & number of users\n• Deployment type (cloud / on-premise)\n• Customization scope\n• Support tier\n\nWe provide a transparent, detailed quote within 2 business days — no hidden fees.\n\nContact us to get a free quote! 👉' },
   { keys:['contact','reach','email','phone','call','get in touch','talk','speak'],
-    answer:'You can reach us at:\n\n📧 info@confeanzatech.com\n📞 India: +91 9528686839\n📞 US: +1 (505) 507-0885\n\nOr use our Contact form — we respond within 1 business day.' },
+    answer:'You can reach us at:\n\n📧 info@confeanzatech.com\n📞 +1 (505) 585-2851\n\nOr use our Contact form — we respond within 1 business day.' },
   { keys:['location','office','address','where','noida','india','headquarter'],
     answer:'Our HQ is in:\n\n📍 Noida Sector-62\nUttar Pradesh 201309, India\n\nWe deliver projects globally — US, UK, Middle East, Southeast Asia, and Europe.' },
   { keys:['demo','trial','demonstration','see product','see platform','show me'],
@@ -46,7 +46,7 @@ function getReply(input){
       if(t.indexOf(kb[i].keys[j])!==-1) return kb[i].answer;
     }
   }
-  return "I'm not sure about that, but our team would love to help! 😊\n\nYou can reach us at:\n📧 info@confeanzatech.com\n📞 +91 9528686839\n\nOr visit our Contact page to send a message.";
+  return "I'm not sure about that, but our team would love to help! 😊\n\nYou can reach us at:\n📧 info@confeanzatech.com\n📞 +1 (505) 585-2851\n\nOr visit our Contact page to send a message.";
 }
 
 /* ── Inject CSS ── */
